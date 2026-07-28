@@ -14,6 +14,7 @@ app.use("/sessions", sessionsRouter)
 
 
 
-app.listen(PORT, () => {
+app.listen(PORT, (e) => {
+    if (e) return console.log(e);
     console.log(`Server is running on port ${PORT}`);
 });
